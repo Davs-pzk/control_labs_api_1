@@ -9,8 +9,8 @@ const isCreateEnvironmentDTO = (value: unknown): value is ICreateEnvironmentDTO 
   const environment = value as Record<string, unknown>;
   return (
     typeof environment.numero === 'number' && Number.isInteger(environment.numero)&&
-    typeof environment.capacidad === 'number' && Number.isInteger(environment.numeroPC) &&
-    typeof environment.numeroEquipos === 'number' && Number.isInteger(environment.numeroPC) &&
+    typeof environment.capacidad === 'number' && Number.isInteger(environment.capacidad) &&
+    typeof environment.numeroEquipos === 'number' && Number.isInteger(environment.numeroEquipos) &&
     typeof environment.instructorRecibe === 'string' && environment.instructorRecibe.trim() !== ''
   );
 };
